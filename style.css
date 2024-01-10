@@ -14,7 +14,7 @@ body{
     background-color: pink;
 }
 
-.screen {
+#screen {
     font-size: 24px;
     display: flex;
     justify-content: flex-end;
