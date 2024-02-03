@@ -2,7 +2,7 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.calc-container {
+#calc-container {
 
     display: flex;
     flex-direction: column;
@@ -36,4 +36,8 @@ body{
 
 #btn-0{
     grid-column: span 2;
+}
+
+.operand:focus {
+    background-color: lightblue;
 }
