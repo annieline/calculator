@@ -4,7 +4,7 @@ const func = document.querySelectorAll(".func");
 const display = document.getElementById("screen");
 let evalC = [];
 let currentOp = null;
-let newInput = null;
+clear();
 
 nums.forEach(num => num.addEventListener('click', () => {
     if (newInput) {
@@ -56,7 +56,10 @@ func.forEach(func => func.addEventListener('click', () => {
             }
             break;
         case 'btn-percent':
-            display.textContent = operate(evalC, 100, '/');
+            addNumber();
+            operate(evalC, 100, '/');
+        case 'btn-sign':
+            display.textContent = -display.textContent;
             addNumber();
     }
     newInput = true;
