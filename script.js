@@ -4,6 +4,7 @@ const func = document.querySelectorAll(".func");
 const display = document.getElementById("screen");
 let evalC = [];
 let currentOp = null;
+let newInput;
 clear();
 
 nums.forEach(num => num.addEventListener('click', () => {
@@ -16,7 +17,7 @@ nums.forEach(num => num.addEventListener('click', () => {
 }));
 
 operands.forEach(oper => oper.addEventListener('click', () => {
-    if (!newInput) {
+    if (!newInput || currentOp == null) {
         evalC.push(display.textContent);
     }
     if (evalC.length == 2){
