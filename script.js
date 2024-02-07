@@ -58,9 +58,17 @@ func.forEach(func => func.addEventListener('click', () => {
         case 'btn-percent':
             addNumber();
             operate(evalC, 100, '/');
+            break;
         case 'btn-sign':
             display.textContent = -display.textContent;
             addNumber();
+            break;
+        case 'btn-decimal':
+            if (!display.textContent.includes('.')) {
+                display.textContent = display.textContent+'.';
+            }
+            newInput = false;
+            return;
     }
     newInput = true;
 }));
